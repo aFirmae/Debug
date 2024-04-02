@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Expression Converter and Evaluator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Expression Converter and Evaluator</h1>
+
+        <input type="text" id="expression" placeholder="Enter an expression" />
+        <h2>select the type of the provided expression: </h2>
+        <div class="select-radio">
+            <div class="p-radio">
+                <input type="radio" id="postfixRadio" name="expressionType" value="postfix" checked>
+                <label for="postfixRadio">Postfix</label>
+            </div>
+            <div class="p-radio">
+                <input type="radio" id="prefixRadio" name="expressionType" value="prefix">
+                <label for="prefixRadio">Prefix</label>
+            </div>
+        </div>
+
+        <button onclick="convertAndEvaluate()">Convert and Evaluate</button>
+
+        <div class="output-area">
+            <h2 class="left">Conversion Steps: </h2>
+            <p id="steps" class="result-steps"></p>
+            <h2 class="left">Result: </h2>
+            <p id="result" class="result-steps"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
