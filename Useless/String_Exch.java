@@ -1,8 +1,7 @@
 import java.util.*;
-public class String_Exch
-{
-    public static void main(String[] args)
-    {
+
+public class String_Exch {
+    public static void main(String[] args) {
         String s;
         char ch;
         int pos;
@@ -15,12 +14,17 @@ public class String_Exch
         System.out.print("Enter the character that will replace the character at position " + pos + ": ");
         ch = sc.next().charAt(0);
 
-        System.out.print("The new string is: " + exchange(s, pos, ch));
+        try {
+            System.out.print("The new string is: " + exchange(s, pos, ch));
+        } catch (StringIndexOutOfBoundsException e) {
+            System.out.print("Invalid position");
+        }
     }
-    public static String exchange(String s, int pos, char ch)
-    {
-        char[] c = s.toCharArray();
-        c[pos + 1] = ch;
-        return new String(c);
+
+    public static String exchange(String s, int pos, char ch) {
+        StringBuilder sb = new StringBuilder(s);
+        sb.setCharAt(pos - 1, ch);
+
+        return sb.toString();
     }
 }
