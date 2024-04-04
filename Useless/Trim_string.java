@@ -2,24 +2,17 @@ public class Trim_string
 {
     public static void main(String[] args) 
     {
-        String s = "  Hello World  "; 
-        int i = 0, j = s.length() - 1;
+        String s = "  Hello   World  "; 
+        String k = "";
 
-        for (i = 0; i < s.length(); i++) 
+        for (int i = 0; i < s.length(); i++) 
         {
-            if (s.charAt(i) != ' ') break;
+            if (s.charAt(i) != ' ' || (i + 1 < s.length() && s.charAt(i + 1) != ' ')) 
+            {
+                    k += s.charAt(i);
+            }
         }
-
-        for (j = s.length() - 1; j >= 0; j--) 
-        {
-            if (s.charAt(j) != ' ') break;
-        }
-
-        System.out.print("Trimmed String: ");
-        for  (int k = i; k <= j; k++) 
-        {
-            System.out.print(s.charAt(k));
-        }
+        System.out.println("Trimmed String: " + k + " of Length: " + k.length());
         System.out.println();
     }
 }
