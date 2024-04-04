@@ -17,6 +17,6 @@ public class Pangram
                 set.add(c);
             }
         }
-        return set.size() == 25;
+        return set.size() == 26;
     }
 }
