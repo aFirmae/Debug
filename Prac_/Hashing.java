@@ -46,7 +46,8 @@ public class Hashing
             if (s.charAt(i) == ' ') {
                 words.add(word);
                 word = "";
-            } else {
+            } 
+            else {
                 word += s.charAt(i);
             }
         }
