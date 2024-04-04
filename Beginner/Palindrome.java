@@ -2,27 +2,30 @@ import java.util.Scanner;
 
 public class Palindrome
 {
-    String reverse(String str)
+    public static String reverse(String str)
     {
-        String rev = "";
-        for (int i = str.length() - 1; i >= 0; i--)
+        for (int i = str.length() - 1; i >= str.length()/2; i--)
         {
-            rev += str.charAt(i);
+            // str = str.substring(0, i) + str.charAt(str.length() - i - 1) + str.substring(i + 1);
+            char[] temp = str.toCharArray();
+            char t = temp[i];
+            temp[i] = temp[str.length() - i - 1];
+            temp[str.length() - i - 1] = t;
+            str = new String(temp);
         }
-        return rev;
+        return str;
     }
 
     public static void main(String args[])
     {
         String str;
         Scanner obj = new Scanner(System.in);
-        System.out.println("Enter the string");
+        System.out.print("Enter the string: ");
         str = obj.nextLine();
 
-        Palindrome obj1 = new Palindrome();
-        String rev = obj1.reverse(str);
+        String rev = reverse(str);
 
-        if (str == rev)
+        if (str.equalsIgnoreCase(rev))
             System.out.println(str + " is palindrome");
         else
             System.out.println(str + " isn't Palindrome");
