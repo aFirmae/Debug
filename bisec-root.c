@@ -8,7 +8,7 @@
 
 float f(float x)
 {
-    return 2*pow(x, 3) - 3*x - 5;;
+    return pow(x, 4) - x - 10;
 }
 
 int main()
@@ -32,7 +32,7 @@ int main()
         printf("b = ");
         scanf("%f", &b);
     }
-    while (n < 10 && (b - a) >= err)
+    while (n < 5 && (b - a) >= err)
     {
         c = (a + b) / 2;
         printf("n = %d, a = %f, b = %f, c = %f, f(c) = %f\n", n, a, b, c, f(c));
@@ -50,7 +50,7 @@ int main()
         }
         n++;
     }
-    printf("The root of the equation is %f\n", c);
+    printf("The root of the equation is %.2f\n", c);
     return 0;
 }
 
