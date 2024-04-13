@@ -20,7 +20,8 @@ class Frac_Knapsack
         return maxProfit;
     }
 
-    public static void main(String args[]) {
+    public static void main(String args[]) 
+    {
         int profit[] = new int[] { 50, 60, 70 };
         int weight[] = new int[] { 5, 10, 20 };
         int capacity = 20;
