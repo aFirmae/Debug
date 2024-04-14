@@ -1,6 +1,7 @@
 class ActivitySelection 
 {
-    public static void printMaxActivities(int s[], int f[]) {
+    public static void printMaxActivities(int s[], int f[]) 
+    {
         int i = 0;
 
         System.out.println("Following activities are selected");
@@ -10,7 +11,7 @@ class ActivitySelection
         {
             if (s[j] >= f[i]) 
             {
-                System.out.print("A" + (1 + j) + " ");
+                System.out.print("A" + (1 +j) + " ");
                 i = j;
             }
         }
