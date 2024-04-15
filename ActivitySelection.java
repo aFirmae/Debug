@@ -11,7 +11,7 @@ class ActivitySelection
         {
             if (s[j] >= f[i]) 
             {
-                System.out.print("A" + (1 +j) + " ");
+                System.out.print("A" + (1 + j) + " ");
                 i = j;
             }
         }
