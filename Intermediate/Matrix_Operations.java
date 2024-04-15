@@ -1,9 +1,15 @@
 public class Matrix_Operations
 {
     public static void main(String[] args) {
-        Matrix m = new Matrix(3, 3);
-        int[][] matrix = {{2, 7, -5}, {6, 3, 9}, {-4, 2, 8}};
+        
+        int[][] matrix = {
+            {2, 7, -5}, 
+            {6, 3, 9}, 
+            {-4, 2, 8}};
+            
+        Matrix m = new Matrix(matrix.length, matrix[0].length);
         m.setMatrix(matrix);
+
         System.out.println("Normal: " + m.getNormal());
         System.out.println("Trace: " + m.getTrace());
         System.out.println("Determinant: " + m.getDeterminant());

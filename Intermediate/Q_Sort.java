@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Q_Sort
 {
     public static void main(String[] args)
@@ -5,10 +7,7 @@ public class Q_Sort
         int[] arr = {69, 2, 25, 100, 50, 10};
         Q_Sort obj = new Q_Sort();
         obj.quickSort(arr, 0, arr.length - 1);
-        for(int i = 0; i < arr.length; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
+        System.out.println("Sorted Array: " + Arrays.toString(arr));
     }
     void quickSort(int[] arr, int low, int high)
     {
