@@ -3,8 +3,9 @@ public class M_Sort
     public static void main(String[] args)
     {
         int[] arr = {69, 2, 25, 100, 50, 10};
-        M_Sort obj = new M_Sort();
-        obj.merge_sort(arr, 0, arr.length - 1);
+
+        merge_sort(arr, 0, arr.length - 1);
+
         for(int i = 0; i < arr.length; i++)
         {
             System.out.print(arr[i] + " ");
@@ -16,8 +17,8 @@ public class M_Sort
         int p = low, q = mid + 1;
 
         /*  Create a new array of size that of all divided subarrays combined.
-            An array always has array[0] - array[array.length] + 1
-            number of elements.
+            An array always has a fixed size, so we need to calculate the
+            number of elements, which is the difference between the high and low indices.
             Also, initialise an index counter for the new array. */
         int[] newArr = new int[high - low + 1];
         int k = 0;
@@ -36,11 +37,14 @@ public class M_Sort
         while(q <= high) newArr[k++] = nums[q++];
 
         // Copy the sorted elements from the new array back into the original array.
+        // Can also be done using System.arraycopy() method, like this: 
+        // System.arraycopy(newArr, 0, nums, low, high - low + 1);
         for(int i = low; i <= high; i++)
         {
-            nums[i] = newArr[i - low];
+            nums[i] = newArr[i - low]; // i - low is used as the new array starts from index 0, while the original array starts from the low index.
         }
     }
+
     public static void merge_sort(int[] arr, int low, int high)
     {
         // Calculate the middle index for dividing the array.

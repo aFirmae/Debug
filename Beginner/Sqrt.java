@@ -20,11 +20,12 @@ class Two
     {
         double result;
         double temp = 1.0;
+        double errTol = 0.000000000001;
 
         while (true)
         {
             result = (temp + a / temp) / 2;
-            if (Math.abs(result - temp) < 0.0001) break;
+            if (Math.abs(result - temp) < errTol) break;
             temp = result;
         }
         return result;

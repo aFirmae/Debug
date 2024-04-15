@@ -1,29 +1,32 @@
 import java.util.*;
 
 public class Solution {
-    public int maxSubarrayLength(int[] nums, int k) {
-        int n = nums.length;
+    
+    public static void main(String[] args) {
 
-        Map<Integer, Integer> map = new HashMap<>();
+        int[] arr = new int[] {32, 45, 67, 24, 32, 24, 45};
+        System.out.println("Original Array: " + Arrays.toString(arr));
+
+        System.out.println("Array with duplicates removed: " + Arrays.toString(rmDup(arr)));
+    }
+
+    public static int[] rmDup(int[] nums) {
 
         int i = 0;
-        int j = 0;
-        int result = 0;
+        int[] res = new int[nums.length];
 
-        while(j < n) {
-            map.put(nums[j], map.getOrDefault(nums[j], 0) + 1);
-
-            while(i < j && map.getOrDefault(nums[j], 0) > k) {
-                map.put(nums[i], map.get(nums[i]) - 1);
-                if(map.get(nums[i]) == 0)
-                    map.remove(nums[i]);
-                i++;
-            }
-
-            result = Math.max(result, j - i + 1);
-            j++;
+        for (int num : nums) {
+            if (!contains(res, num)) res[i++] = num;
         }
 
-        return result;
+        return Arrays.copyOf(res, i);
+    }
+
+    public static boolean contains(int[] arr, int target) {
+
+        for (int num : arr) {
+            if (num == target) return true;
+        }
+        return false;
     }
 }
