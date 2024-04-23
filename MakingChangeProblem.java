@@ -40,8 +40,8 @@ public class MakingChangeProblem {
     }
 
     public static void main(String[] args) {
-        int[] denominations = {1, 3, 4, 7, 8};
-        int totalAmount = 12;
+        int[] denominations = {2, 3, 5, 6};
+        int totalAmount = 9;
 
         int[][] changeTable = createChangeTable(denominations, totalAmount);
         printChangeTable(changeTable);
