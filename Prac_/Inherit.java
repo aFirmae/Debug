@@ -3,7 +3,7 @@ public class Inherit {
         
         Volume v = new Volume(10, 20, 30);
 
-        System.out.println("Area: " + v.area());
+        System.out.println("Area1: " + v.area());
         System.out.println("Volume: " + v.volume());
     }
 }
@@ -16,8 +16,8 @@ class Shapes {
     }
 }
 
-class Area extends Shapes {
-    Area (int a, int b) {
+class Area1 extends Shapes {
+    Area1 (int a, int b) {
         super(a, b);
     }
     protected int area() {
@@ -25,7 +25,7 @@ class Area extends Shapes {
     }
 }
 
-class Volume extends Area {
+class Volume extends Area1 {
     int h;
     Volume (int a, int b, int h) {
         super(a, b);
