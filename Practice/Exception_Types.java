@@ -11,9 +11,9 @@ public class Exception_Types {
             3. Number Format Exception
             4. String Index Out Of Bounds Exception
             5. Null Pointer Exception
-                    """;
+                    """
         );
-        System.out.println("Enter your choice : ");
+        System.out.print("Enter your choice : ");
         int choice = Integer.parseInt(br.readLine());
 
         switch (choice) {
