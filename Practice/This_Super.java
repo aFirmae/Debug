@@ -10,7 +10,7 @@ public class This_Super {
 class Square {
     int a;
 
-    Square(int side) {
+    Square(int a) {
         this.a = a;
     }
 
@@ -24,7 +24,7 @@ class Sum extends Square {
 
     Sum(int a, int b) {
         super(a);
-        this.side2 = b;
+        this.b = b;
     }
 
     int add() {
