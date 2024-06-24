@@ -1,7 +1,7 @@
 public class Constructor_Overloading {
-    int id;
+
+    int id, age;
     String name;
-    int age;
 
     Constructor_Overloading(int i, String n) {
         id = i;
