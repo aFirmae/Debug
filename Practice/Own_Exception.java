@@ -8,7 +8,7 @@ class Own_Exception extends Exception {
             float quo = (float) a / b;
             if (quo < 1) throw new Own_Exception("Number is very small");
         } 
-        catch (MyException e) {
+        catch (Exception e) {
             System.out.println("Caught");
             System.out.println(e.getMessage());
         }
