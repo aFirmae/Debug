@@ -11,6 +11,7 @@ public class Exception_Types {
             3. Number Format Exception
             4. String Index Out Of Bounds Exception
             5. Null Pointer Exception
+            6. IOException
                     """
         );
         System.out.print("Enter your choice : ");
@@ -53,6 +54,13 @@ public class Exception_Types {
                     System.out.println(str.length());
                 } catch (NullPointerException e) {
                     System.out.println("Null Pointer Exception : " + e);
+                }
+                break;
+            case 6:
+                try {
+                    FileInputStream fis = new FileInputStream("file.txt");
+                } catch (IOException e) {
+                    System.out.println("IOException : " + e);
                 }
                 break;
             default:
